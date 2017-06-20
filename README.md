@@ -40,13 +40,14 @@ Our `Hello` component isn't too helpful. Let's make it more interesting.
 First, we pass in data wherever we are rendering our component, in this case in `src/index.js`:
 
 ```js
-import ReactDOM from `react-dom`
-import Hello from './App.js'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Hello from './App.js';
 
 ReactDOM.render(
   <Hello name={"Nick"} />,
   document.getElementById('root')
-)
+);
 ```
 
 Then in our component definition, we have a reference to that data via as a property on the `props` object...
@@ -65,20 +66,21 @@ In the above example, we replaced `world` with `{this.props.name}`.
 
 #### What are `.props`?
 
-Properties! Every component has `.props`
-* Properties are immutable. That is, they cannot be changed while your program is running.
-* We define properties in development and pass them in as attributes to the JSX element in our `.render` method.
+Properties! Every component has `.props`.
+- Properties are *immutable*. That is, they cannot be changed while your program is running.
+- We define properties in development and pass them in as attributes to the JSX element in our `.render` method.
 
-First we can pass multiple properties to our component when its rendered in `src/index.js`..
+For instance - we can pass multiple properties to our component when its rendered in `src/index.js`:
 
 ```js
-import ReactDOM from `react-dom`
-import Hello from './App.js'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Hello from './App.js';
 
 ReactDOM.render(
   <Hello name={"Nick"} age={24} />,
   document.getElementById('root')
-)
+);
 ```
 
 Then in our component definition we have access to both values...
@@ -90,7 +92,7 @@ class Hello extends Component {
       <div>
         <h1>Hello {this.props.name}</h1>
         <p>You are {this.props.age} years old</p>
-      <div>
+      </div>
     )
   }
 }
@@ -145,7 +147,7 @@ Ok, we set an initial state. But in order to change the state, we need to set up
     Let's do that via a button click event. Where do you think should we initialize that button click event?
   </strong></summary>
 
-  > Inside the `JSX` of our return value! In Hello `render` method we can instantiate our event listeners. Notice the ultra-slick ES6 function.
+  > Inside the `JSX` of our return value! In the Hello `render` method, we can instantiate our event listeners. Notice the ultra-slick ES6 function.
 
 </details>
 
