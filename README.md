@@ -78,7 +78,7 @@ import ReactDOM from 'react-dom';
 import Hello from './App.js';
 
 ReactDOM.render(
-  <Hello name={"Nick"} age={24} />,
+  <Hello name={"Nick"} age={30} />,
   document.getElementById('root')
 );
 ```
@@ -91,7 +91,7 @@ class Hello extends Component {
     return (
       <div>
         <h1>Hello {this.props.name}</h1>
-        <p>You are {this.props.age} years old</p>
+        <p>I heard you are {this.props.age} years old.</p>
       </div>
     )
   }
@@ -131,9 +131,8 @@ class Hello extends Component {
     return (
       <div>
         <h1>Hello {this.props.name}</h1>
-        <p>You are {this.props.age} years old</p>
-        <p>The initial count is {this.state.counter}
-        </p>
+        <p>I heard you are {this.props.age} years old.</p>
+        <p>{this.state.counter} people like that.</p>
       </div>
     )
   }
@@ -172,8 +171,7 @@ class Hello extends Component {
       <div>
         <h1>Hello {this.props.name}</h1>
         <p>You are {this.props.age} years old</p>
-        <p>The initial count is {this.state.counter}
-        </p>
+        <p>{this.state.counter} people like that.</p>
         <button onClick={(e) => this.handleClick(e)}>click me!</button>
       </div>
     )
